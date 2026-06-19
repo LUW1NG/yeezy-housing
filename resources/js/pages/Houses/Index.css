@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+:root {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: white;
+    color: black;
+}
+.page-wrapper {
+    @apply min-h-screen bg-white flex flex-col items-center px-8 text-black antialiased;
+}
+.logo {
+    @apply fixed top-8 text-3xl font-black uppercase transition-all duration-700 text-black;
+    letter-spacing: 0.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.1);
+}
+.logo-loading {
+    @apply opacity-20 scale-95;
+}
+.search-container {
+    @apply w-full max-w-[1400px] transition-all duration-1000 ease-in-out flex flex-col items-center;
+}
+.search-initial {
+    @apply mt-[40vh];
+}
+
+.search-active {
+    @apply mt-32;
+}
+
+.search-input {
+    @apply w-full text-7xl py-6 border-b-[6px] border-black 
+           outline-none bg-transparent font-black uppercase text-center text-black transition-all;
+    letter-spacing: -0.05em;
+}
+
+.search-input::placeholder {
+    @apply text-gray-200 transition-opacity duration-300;
+}
+
+.search-input:focus::placeholder {
+    @apply opacity-0;
+}
+
+.houses-list {
+    @apply mt-24 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-20;
+}
+
+.house-card {
+    @apply w-full p-8 border-[3px] border-black flex flex-col bg-white
+           transition-all duration-300 relative;
+    aspect-ratio: 1 / 1.2;
+}
+
+.house-card:hover {
+    box-shadow: 12px 12px 0px 0px rgba(0,0,0,1);
+    transform: translate(-6px, -6px);
+}
+
+.house-address-short {
+    @apply text-5xl font-black uppercase leading-[1] mb-4 text-black break-words;
+    letter-spacing: -0.06em;
+}
+
+.house-zip {
+    @apply text-xl font-bold mb-8 text-black opacity-40;
+    letter-spacing: -0.02em;
+}
+
+.house-full-info {
+    @apply text-[10px] text-black uppercase leading-tight mt-auto font-black;
+    letter-spacing: 0.12em;
+}
+.house-address-short {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
