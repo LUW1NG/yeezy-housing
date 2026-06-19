@@ -28,7 +28,7 @@ export default function Index({ houses, filters, auth }) {
                         <div className="flex gap-4 items-center">
                             <Link 
                                 href="/dashboard" 
-                                className="text-xs font-bold tracking-tighter hover:text-gray-600 transition-colors"
+                                className="text-xs font-bold tracking-tighter text-black hover:text-gray-600 transition-colors"
                             >
                                 {auth.user.name.toUpperCase()}
                             </Link>
